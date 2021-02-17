@@ -13,4 +13,7 @@ class Airport{
   clearForTakeOff(plane) {
     this._hangar = [];
   }
+  isStormy() {
+    return false;
+  }
 }
