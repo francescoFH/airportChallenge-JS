@@ -9,6 +9,9 @@ class Airport{
     return this._hangar;
   }
   clearForLanding(plane) {
+    if(this._weather.isStormy()) {
+      throw new Error('cannot land during storm')
+    }
     this._hangar.push(plane);
   };
   clearForTakeOff(plane) {
